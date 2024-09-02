@@ -1,7 +1,6 @@
-﻿using System.Linq;
+﻿using CosmicMemory.Helper;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.U2D;
-using YG;
 
 namespace CosmicMemory.View
 {
@@ -14,7 +13,7 @@ namespace CosmicMemory.View
         #region Unity Methods
         private void Start()
         {
-            SetSprite(YandexGame.savesData.idBackground);
+            SetSprite(SaveHelper.savesData.idBackground);
         }
         #endregion
 
@@ -22,8 +21,9 @@ namespace CosmicMemory.View
         public void SwitchSprite(string idBack)
         {
             SetSprite(idBack);
-            YandexGame.savesData.idBackground = idBack;
-            YandexGame.SaveProgress();
+
+            SaveHelper.savesData.idBackground = idBack;
+            SaveHelper.SaveData();
         }
         #endregion
 
@@ -40,7 +40,7 @@ namespace CosmicMemory.View
             if (targetSprite == null)
             {
                 Debug.Log("Не найден спрайт");
-                SpriteRenderer currentSprite = _backgrounds.FirstOrDefault(e => e.sprite.name == YandexGame.savesData.idBackground);
+                SpriteRenderer currentSprite = _backgrounds.FirstOrDefault(e => e.sprite.name == SaveHelper.savesData.idBackground);
                 currentSprite.gameObject.SetActive(true);
 
                 Debug.Log($"Установлен последний активный спрайт: {currentSprite.sprite.name}");

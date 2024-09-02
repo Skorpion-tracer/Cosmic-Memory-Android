@@ -1,4 +1,4 @@
-﻿using YG;
+﻿using CosmicMemory.Helper;
 
 namespace CosmicMemory.View
 {
@@ -7,12 +7,12 @@ namespace CosmicMemory.View
         #region Public Methods
         public override void ChangeToggle(bool change)
         {
-            if (YandexGame.savesData.idPictureBack.Equals(IdBack)) return;
+            if (SaveHelper.savesData.idPictureBack.Equals(IdBack)) return;
 
             if (change)
             {
-                YandexGame.savesData.idPictureBack = IdBack;
-                YandexGame.SaveProgress();
+                SaveHelper.savesData.idPictureBack = IdBack;
+                SaveHelper.SaveData();
             }
 
             AudioGame.instance.PlayClick();

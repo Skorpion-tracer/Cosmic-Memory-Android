@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using YG;
+﻿using CosmicMemory.Helper;
+using UnityEngine;
 
 namespace CosmicMemory.View
 {
@@ -14,7 +14,7 @@ namespace CosmicMemory.View
         [SerializeField] private AudioSource _click;
         [SerializeField] private AudioSource _music;
 
-        private float _delaywinsPlay = 1.2f;
+        private float _delayWinsPlay = 1.2f;
         #endregion
 
         #region Unity Methods
@@ -30,22 +30,22 @@ namespace CosmicMemory.View
                 Destroy(gameObject);
             }
 
-            _music.mute = !YandexGame.savesData.isOnMusic;
+            _music.mute = !SaveHelper.savesData.isOnMusic;
         }
         #endregion
 
         #region Public Methods
         public void PlayWins()
         {
-            if (YandexGame.savesData.isOnSounds)
+            if (SaveHelper.savesData.isOnSounds)
             {
-                _wins.PlayDelayed(_delaywinsPlay);
+                _wins.PlayDelayed(_delayWinsPlay);
             }
         }
 
         public void PlayClick()
         {
-            if (YandexGame.savesData.isOnSounds)
+            if (SaveHelper.savesData.isOnSounds)
             {
                 _click.Play();
             }
@@ -53,15 +53,15 @@ namespace CosmicMemory.View
 
         public void OnOffSounds()
         {
-            YandexGame.savesData.isOnSounds = !YandexGame.savesData.isOnSounds;
-            YandexGame.SaveProgress();
+            SaveHelper.savesData.isOnSounds = !SaveHelper.savesData.isOnSounds;
+            SaveHelper.SaveData();
         }
 
         public void OnOffMusic()
         {
             _music.mute = !_music.mute;
-            YandexGame.savesData.isOnMusic = !_music.mute;
-            YandexGame.SaveProgress();
+            SaveHelper.savesData.isOnMusic = !_music.mute;
+            SaveHelper.SaveData();
         }
         #endregion
     }

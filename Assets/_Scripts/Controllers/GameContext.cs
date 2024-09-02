@@ -2,9 +2,7 @@
 using CosmicMemory.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using UnityEngine;
-using YG;
 using Zenject;
 
 namespace CosmicMemory.Controllers
@@ -19,14 +17,15 @@ namespace CosmicMemory.Controllers
 
         #region Properties
         public GameState GameState { get; set; } = GameState.None;
-        public List<Level> Levels => YandexGame.savesData.levels;
+        public List<Level> Levels => SaveHelper.savesData.levels;
         public int CurrentLevel => _curentLevel;
         #endregion
 
         #region Public Methods
         public void Initialize()
         {
-            YandexGame.GetDataEvent += LoadData;
+            SaveHelper.LoadData();
+            LoadData();
         }
 
         public void SetDefaultLevel()
@@ -69,7 +68,7 @@ namespace CosmicMemory.Controllers
 
         public bool IsLastLevel()
         {
-            return _curentLevel != _extremeLevel - 1;
+            return _curentLevel != _extremeLevel - 1 || _curentLevel == _extremeLevel;
         }
 
         public void UpdateDataLevel(float time, int scores)
@@ -77,51 +76,22 @@ namespace CosmicMemory.Controllers
             SaveDataLevel(time);
 
             _scores = scores;
-            YandexGame.savesData.scores += _scores;
 
-            YandexGame.SaveProgress();
-
-            if (YandexGame.auth)
-            {
-                YandexGame.NewLeaderboardScores("Scores", YandexGame.savesData.scores);
-            }
-        }
-
-        public void UpdateDataLevelRewarded(int scores)
-        {
-            //SaveDataLevel(time);
-
-            YandexGame.savesData.scores -= _scores;
-            YandexGame.savesData.scores += scores;
-
-            YandexGame.SaveProgress();
-
-            YandexGame.NewLeaderboardScores("Scores", YandexGame.savesData.scores);
+            SaveHelper.savesData.scores += _scores;
+            SaveHelper.SaveData();
         }
         #endregion
 
         #region Private Methods
         private void LoadData()
         {
-            if (YandexGame.savesData.levels.Count == 0)
+            if (SaveHelper.savesData.levels.Count == 0)
             {
-                YandexGame.savesData.InitLevels();
+                SaveHelper.savesData.InitLevels();
                 Debug.Log("Данные не загружены, Созданы поумолчанию");
             }
 
             _extremeLevel = Levels.FirstOrDefault(e => e.LevelHard == LevelHard.Extreme).Index;
-
-            StringBuilder data = new();
-
-            foreach (Level level in Levels)
-            {
-                data.AppendLine($"Level: {level.Index} {level.LevelHard}; Access: {level.IsAcces}; Complete: {level.IsComplete};");
-            }
-
-            Debug.Log(data.ToString());
-            Debug.Log($"Осуществленные покупки: {string.Join("   ;", YandexGame.savesData.buys)}");
-
-            YandexGame.GetDataEvent -= LoadData;
         }
 
         private void SaveDataLevel(float time)

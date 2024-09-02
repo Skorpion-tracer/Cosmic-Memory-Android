@@ -15,10 +15,4 @@ namespace CosmicMemory.Helper
         Hard,
         Extreme
     }
-
-    public enum TypeSwitchImage : byte
-    {
-        Free,
-        Paid
-    }
 }

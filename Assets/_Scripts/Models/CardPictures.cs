@@ -1,7 +1,6 @@
-﻿using System;
+﻿using CosmicMemory.Helper;
+using System;
 using UnityEngine;
-using UnityEngine.UIElements;
-using YG;
 
 namespace CosmicMemory.Models
 {
@@ -27,7 +26,7 @@ namespace CosmicMemory.Models
         #region Public Methods
         public void SetPictureBack()
         {
-            _pictureBack = Resources.Load<Sprite>(_pathBackground + YandexGame.savesData.idPictureBack);
+            _pictureBack = Resources.Load<Sprite>(_pathBackground + SaveHelper.savesData.idPictureBack);
             if (_pictureBack == null)
             {
                 _pictureBack = Resources.Load<Sprite>(_pathBackground + _picDefault);

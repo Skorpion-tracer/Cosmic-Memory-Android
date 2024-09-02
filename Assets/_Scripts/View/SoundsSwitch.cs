@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using CosmicMemory.Helper;
+using UnityEngine;
 using UnityEngine.UI;
-using YG;
 
 namespace CosmicMemory.View
 {
@@ -22,8 +22,8 @@ namespace CosmicMemory.View
         #endregion
 
         #region Properties
-        private bool IsSound => YandexGame.savesData.isOnSounds;
-        private bool IsMusic => YandexGame.savesData.isOnMusic;
+        private bool IsSound => SaveHelper.savesData.isOnSounds;
+        private bool IsMusic => SaveHelper.savesData.isOnMusic;
         #endregion
 
         #region Unity Methods

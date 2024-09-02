@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using YG;
 
 namespace CosmicMemory.View
 {
@@ -15,16 +14,6 @@ namespace CosmicMemory.View
         #endregion
 
         #region Unity Methods
-        private void OnEnable()
-        {
-            YandexGame.PurchaseSuccessEvent += SuccessPurchase;
-        }
-
-        private void OnDisable()
-        {
-            YandexGame.PurchaseSuccessEvent -= SuccessPurchase;
-        }
-
         private void Start()
         {
             _backgrounds.AddRange(_backgroundContainer.GetComponentsInChildren<BaseChangeImage>());
@@ -33,17 +22,6 @@ namespace CosmicMemory.View
             if (sb != null)
             {
                 sb.Switch(true);
-            }
-        }
-        #endregion
-
-        #region Private Methods
-        private void SuccessPurchase(string id)
-        {
-            BaseChangeImage sb = _backgrounds.FirstOrDefault(e => e.IdBack == id);
-            if (sb != null)
-            {
-                sb.SuccessPurchase();
             }
         }
         #endregion

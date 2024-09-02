@@ -1,5 +1,4 @@
 ﻿using CosmicMemory.View;
-using YG;
 
 namespace CosmicMemory.Helper
 {
@@ -12,12 +11,12 @@ namespace CosmicMemory.Helper
 
         private static string GetBackImage(SelectBackgroundUI _)
         {
-            return YandexGame.savesData.idBackground;
+            return string.Empty; //YandexGame.savesData.idBackground; //TODO переделать на сохранения
         }
 
         private static string GetBackImage(SelectBackPicture _)
         {
-            return YandexGame.savesData.idPictureBack;
+            return string.Empty; //YandexGame.savesData.idPictureBack; //TODO переделать на сохранения
         }
     }
 }

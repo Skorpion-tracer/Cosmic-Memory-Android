@@ -3,7 +3,6 @@ using CosmicMemory.Helper;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using YG;
 using Zenject;
 
 namespace CosmicMemory.View
@@ -108,7 +107,7 @@ namespace CosmicMemory.View
                 Append(transform.DORotate(Vector3.zero, _durationOpen)).
                 SetLink(gameObject).SetEase(Ease.InSine);
 
-            if (YandexGame.savesData.isOnSounds)
+            if (SaveHelper.savesData.isOnSounds)
                 _soundOpen.Play();
         }
 
@@ -157,7 +156,7 @@ namespace CosmicMemory.View
             _tweenEnterCard = transform.DOScale(new Vector2(_scaleEnterCard, _scaleEnterCard), _durationEnterCard)
                 .SetLink(gameObject).SetEase(_easeEnter);
 
-            if (YandexGame.savesData.isOnSounds)
+            if (SaveHelper.savesData.isOnSounds)
                 _soundEnter.Play();
         }
 
@@ -187,7 +186,7 @@ namespace CosmicMemory.View
 
         public void PlaySoundMatch()
         {
-            if (YandexGame.savesData.isOnSounds)
+            if (SaveHelper.savesData.isOnSounds)
                 _soundMatch.PlayDelayed(_delayMatchPlay);
         }
         #endregion
