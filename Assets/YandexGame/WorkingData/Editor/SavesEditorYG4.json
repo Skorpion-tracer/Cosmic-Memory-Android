@@ -1,0 +1,231 @@
+{
+    "idSave": 4,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "scores": 666,
+    "levels": [
+        {
+            "Index": 1,
+            "LevelHard": 0,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 2,
+            "LevelHard": 0,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 3,
+            "LevelHard": 0,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 4,
+            "LevelHard": 0,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 5,
+            "LevelHard": 0,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 6,
+            "LevelHard": 0,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 7,
+            "LevelHard": 0,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 8,
+            "LevelHard": 0,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 9,
+            "LevelHard": 0,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 10,
+            "LevelHard": 0,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 11,
+            "LevelHard": 1,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 12,
+            "LevelHard": 1,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 13,
+            "LevelHard": 1,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 14,
+            "LevelHard": 1,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 15,
+            "LevelHard": 1,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 16,
+            "LevelHard": 1,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 17,
+            "LevelHard": 1,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 18,
+            "LevelHard": 1,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 19,
+            "LevelHard": 1,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 20,
+            "LevelHard": 1,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 21,
+            "LevelHard": 2,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 22,
+            "LevelHard": 2,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 23,
+            "LevelHard": 2,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 24,
+            "LevelHard": 2,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 25,
+            "LevelHard": 2,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 26,
+            "LevelHard": 2,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 27,
+            "LevelHard": 2,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 28,
+            "LevelHard": 2,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 29,
+            "LevelHard": 2,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        },
+        {
+            "Index": 30,
+            "LevelHard": 2,
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 217.35650634765626
+        },
+        {
+            "Index": 31,
+            "LevelHard": 3,
+            "IsComplete": false,
+            "IsAcces": true,
+            "TimeComplete": 0.0
+        }
+    ],
+    "buys": [],
+    "idBackground": "id001",
+    "idPictureBack": "pb001",
+    "isOnSounds": true,
+    "isOnMusic": true
+}
