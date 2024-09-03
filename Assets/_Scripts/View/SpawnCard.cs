@@ -15,6 +15,8 @@ namespace CosmicMemory.View
         [Inject] private CardPictures _cardPictures;
         [Inject] private DiContainer _container;
 
+        private const float _coeffCameraWidth = 1.2f;
+
         private float _heightCard;
         private float _widthCard;
         private float _startPointY;
@@ -25,12 +27,16 @@ namespace CosmicMemory.View
         private int _countCardInRow;
 
         private List<CardModel> _cards;
+        Camera camera;
         #endregion
 
         #region Unity Methods
         private void Start()
         {
             _cards = _data.CreateSuitsOfCards(_cardPictures.Pictures);
+            
+            camera = Camera.main;
+            camera.farClipPlane = 20f;
 
             BoxCollider2D cardCollider = _cardPrefab.GetComponent<BoxCollider2D>();
             _heightCard = cardCollider.size.y;
@@ -41,6 +47,8 @@ namespace CosmicMemory.View
             _heightAreaCards = _heightCard * _data.CountRows + (_data.Margin.y * (_data.CountRows - 1));
             _startPointX = 0f - ((_widthAreaCards - _widthCard) * 0.5f);
             _startPointY = (_heightAreaCards - _heightCard) * 0.5f;
+
+            BoundCamera();
 
             PlacementCards();
         }
@@ -65,6 +73,16 @@ namespace CosmicMemory.View
                     pic++;
                 }
                 _startPointY -= _heightCard + _data.Margin.y;
+            }
+        }
+
+        private void BoundCamera()
+        {
+            float widthCam = (camera.ViewportToWorldPoint(Vector2.one).x * 2f) - _coeffCameraWidth;
+
+            if (_widthAreaCards >= widthCam)
+            {
+                camera.orthographicSize = (_widthAreaCards + 1.6f) * Camera.main.pixelHeight / Camera.main.pixelWidth * .5f;
             }
         }
         #endregion

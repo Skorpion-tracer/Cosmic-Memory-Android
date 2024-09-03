@@ -95,7 +95,7 @@ namespace CosmicMemory.View
 
             _gameField.AddCardOpen(this);
 
-            ResetScaleCard(_durationScaleOpenCard);
+            //ResetScaleCard(_durationScaleOpenCard);
 
             DOTween.Sequence().
                 Append(transform.DORotate(new Vector3(0, 90f, 0), _durationOpen)).
@@ -149,6 +149,9 @@ namespace CosmicMemory.View
 
         public void OnPointerEnter(PointerEventData eventData)
         {
+#if UNITY_ANDROID
+            return;
+#endif
             if (IsOpen || _isMove || _gameContext.GameState == GameState.Pause) return;
 
             _backSide.sortingOrder = _sortOrderSwap;
@@ -162,6 +165,9 @@ namespace CosmicMemory.View
 
         public async void OnPointerExit(PointerEventData eventData)
         {
+#if UNITY_ANDROID
+            return;
+#endif
             if (IsOpen || _isMove || _gameContext.GameState != GameState.Game) return;
 
             _backSide.sortingOrder = 0;
