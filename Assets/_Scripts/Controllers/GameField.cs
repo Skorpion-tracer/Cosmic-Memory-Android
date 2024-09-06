@@ -28,6 +28,10 @@ namespace CosmicMemory
         public event Action EndGame;
         #endregion
 
+        #region Properties
+        public List<Card> Cards => _cards;
+        #endregion
+
         #region Public Methods
         public void AddCardOpen(Card card)
         {

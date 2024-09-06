@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c6683a0518f6cc64ea3f5dbd8830c750
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228305
+  packageName: Camera Scaler
+  packageVersion: 1.0.0
+  assetPath: Assets/CameraScaler/Examples/Green.mat
+  uploadId: 520242

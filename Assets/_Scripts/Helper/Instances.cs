@@ -11,12 +11,12 @@ namespace CosmicMemory.Helper
 
         private static string GetBackImage(SelectBackgroundUI _)
         {
-            return string.Empty; //YandexGame.savesData.idBackground; //TODO переделать на сохранения
+            return SaveHelper.savesData.idBackground;
         }
 
         private static string GetBackImage(SelectBackPicture _)
         {
-            return string.Empty; //YandexGame.savesData.idPictureBack; //TODO переделать на сохранения
+            return SaveHelper.savesData.idPictureBack;
         }
     }
 }

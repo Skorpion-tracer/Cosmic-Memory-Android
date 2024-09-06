@@ -52,6 +52,8 @@ namespace CosmicMemory.View
         #region Unity Methods
         private void Start()
         {
+            HelperSizeCamera.ResizeCamera(Camera.main);
+
             _levelsDict.Add(LevelHard.Easy, _levelEasy);
             _levelsDict.Add(LevelHard.Medium, _levelMedium);
             _levelsDict.Add(LevelHard.Hard, _levelHard);

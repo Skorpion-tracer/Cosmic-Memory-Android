@@ -65,6 +65,7 @@ namespace CosmicMemory.View
         #region Properties
         public int Id { get; set; }
         public bool IsOpen { get; private set; } = true;
+        public Bounds Bounds => _backSide.bounds;
         #endregion
 
         #region Public Methods
@@ -83,6 +84,7 @@ namespace CosmicMemory.View
 
         public void ShowCard()
         {
+            transform.localScale = Vector3.zero;
             transform.DOScale(Vector3.one, _durationScaleShowCard).
                 SetEase(_easeShow).OnComplete(() => IsOpen = false);
         }

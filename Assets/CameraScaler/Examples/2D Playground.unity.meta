@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 164637e51800eee46ab6bc376fb5ea13
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228305
+  packageName: Camera Scaler
+  packageVersion: 1.0.0
+  assetPath: Assets/CameraScaler/Examples/2D Playground.unity
+  uploadId: 520242
