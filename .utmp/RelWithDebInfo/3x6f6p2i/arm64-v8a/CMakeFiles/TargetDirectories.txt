@@ -1,0 +1,5 @@
+F:/UnityPractice/CosmicMemoryAndroid/.utmp/RelWithDebInfo/3x6f6p2i/arm64-v8a/CMakeFiles/edit_cache.dir
+F:/UnityPractice/CosmicMemoryAndroid/.utmp/RelWithDebInfo/3x6f6p2i/arm64-v8a/CMakeFiles/rebuild_cache.dir
+F:/UnityPractice/CosmicMemoryAndroid/.utmp/RelWithDebInfo/3x6f6p2i/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+F:/UnityPractice/CosmicMemoryAndroid/.utmp/RelWithDebInfo/3x6f6p2i/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+F:/UnityPractice/CosmicMemoryAndroid/.utmp/RelWithDebInfo/3x6f6p2i/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

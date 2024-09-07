@@ -134,6 +134,11 @@ namespace CosmicMemory.View
             }
         }
 
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
+
         public void PlaySoundClick()
         {
             AudioGame.instance.PlayClick();

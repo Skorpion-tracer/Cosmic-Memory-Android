@@ -540,9 +540,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5417597427786298720}
-        m_TargetAssemblyTypeName: CosmicMemory.View.SoundsSwitch, Assembly-CSharp
-        m_MethodName: SwitchMusic
+      - m_Target: {fileID: 4428833613097709522}
+        m_TargetAssemblyTypeName: CosmicMemory.View.GameplayUI, Assembly-CSharp
+        m_MethodName: PlaySoundClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -700,9 +700,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4800514618810923596}
-        m_TargetAssemblyTypeName: CosmicMemory.View.SoundsSwitch, Assembly-CSharp
-        m_MethodName: SwitchMusic
+      - m_Target: {fileID: 4428833613097709522}
+        m_TargetAssemblyTypeName: CosmicMemory.View.GameplayUI, Assembly-CSharp
+        m_MethodName: PlaySoundClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

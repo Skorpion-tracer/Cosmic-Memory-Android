@@ -82,6 +82,11 @@ namespace CosmicMemory.View
             SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
             OnOffBtns(false);
         }
+
+        public void PlaySoundClick()
+        {
+            AudioGame.instance.PlayClick();
+        }
         #endregion
 
         #region Private Methods
