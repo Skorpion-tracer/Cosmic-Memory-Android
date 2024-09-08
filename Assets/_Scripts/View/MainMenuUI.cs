@@ -32,6 +32,7 @@ namespace CosmicMemory.View
 
         [Space(5f)]
         [SerializeField] private TextMeshProUGUI _timeExtreme;
+        [SerializeField] private TextMeshProUGUI _scores;
 
         [Space(5f)]
         [SerializeField] private Button _buttonStart;
@@ -65,6 +66,8 @@ namespace CosmicMemory.View
 
             _selectorLang.value = _selectorLang.options.IndexOf(_selectorLang.options.FirstOrDefault(e => e.text == SaveHelper.savesData.language));
             _selectorLang.onValueChanged.AddListener(SelectLang);
+
+            _scores.text = SaveHelper.savesData.scores.ToString();
 
             EnableLevelsBtns();
             EnableExtremeBtn();

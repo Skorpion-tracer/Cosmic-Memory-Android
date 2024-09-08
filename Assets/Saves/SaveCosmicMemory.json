@@ -1,6 +1,6 @@
 {
     "language": "ru",
-    "scores": 3837,
+    "scores": 4095,
     "levels": [
         {
             "Index": 1,
@@ -21,7 +21,7 @@
             "LevelHard": 0,
             "IsComplete": true,
             "IsAcces": true,
-            "TimeComplete": 13.574496269226075
+            "TimeComplete": 11.665255546569825
         },
         {
             "Index": 4,
