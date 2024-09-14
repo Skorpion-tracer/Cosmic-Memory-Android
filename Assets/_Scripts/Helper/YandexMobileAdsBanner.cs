@@ -23,7 +23,7 @@ namespace CosmicMemory.Helper
             MobileAds.SetAgeRestrictedUser(true);
 
             // Replace demo Unit ID 'demo-banner-yandex' with actual Ad Unit ID
-            string adUnitId = "demo-banner-yandex";
+            string adUnitId = "R-M-11968369-1";
 
             if (this.banner != null)
             {
@@ -33,7 +33,7 @@ namespace CosmicMemory.Helper
             //BannerAdSize bannerSize = BannerAdSize.StickySize(GetScreenWidthDp());
             // Or set inline banner maximum width and height
             //BannerAdSize bannerSize = BannerAdSize.InlineSize(GetScreenWidthDp(), 300);
-            BannerAdSize bannerSize = BannerAdSize.InlineSize(200, GetScreenHeightDp());
+            BannerAdSize bannerSize = BannerAdSize.InlineSize(40, GetScreenHeightDp());
             this.banner = new Banner(adUnitId, bannerSize, AdPosition.CenterRight);
 
             this.banner.OnAdLoaded += this.HandleAdLoaded;
