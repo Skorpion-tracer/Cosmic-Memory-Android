@@ -17,6 +17,7 @@ namespace CosmicMemory.View
         [Inject] private DiContainer _container;
 
         private const float _coeffCameraWidth = 1.7f;
+        private const float _coeffCameraHeight = 0.7f;
 
         private float _heightCard;
         private float _widthCard;
@@ -35,6 +36,8 @@ namespace CosmicMemory.View
         #region Unity Methods
         private void Start()
         {
+            YandexMobileAdsInterstitial.Instance.ShowInterstitial();
+
             _cards = _data.CreateSuitsOfCards(_cardPictures.Pictures);
             
             _camera = Camera.main;
@@ -93,7 +96,7 @@ namespace CosmicMemory.View
         private bool BoundCamera()
         {
             float widthCam = (_camera.ViewportToWorldPoint(Vector2.one).x * 2f) - _coeffCameraWidth;
-            float heightCam = _camera.ViewportToWorldPoint(Vector2.one).y * 2f;
+            float heightCam = (_camera.ViewportToWorldPoint(Vector2.one).y * 2f);
 
             if (_widthAreaCards >= widthCam)
             {

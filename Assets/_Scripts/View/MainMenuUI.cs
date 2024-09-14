@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
@@ -59,13 +60,15 @@ namespace CosmicMemory.View
             _levelsDict.Add(LevelHard.Medium, _levelMedium);
             _levelsDict.Add(LevelHard.Hard, _levelHard);
 
+            int indexLocale = _selectorLang.options.IndexOf(_selectorLang.options.FirstOrDefault(e => e.text == SaveHelper.savesData.language));
+            _selectorLang.value = indexLocale;
+            _selectorLang.onValueChanged.AddListener(SelectLang);
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[indexLocale];
+
             _panelMain.gameObject.SetActive(true);
             _panelLoading.gameObject.SetActive(false);
 
             _gameContext.SetDefaultLevel();
-
-            _selectorLang.value = _selectorLang.options.IndexOf(_selectorLang.options.FirstOrDefault(e => e.text == SaveHelper.savesData.language));
-            _selectorLang.onValueChanged.AddListener(SelectLang);
 
             _scores.text = SaveHelper.savesData.scores.ToString();
 
@@ -251,6 +254,10 @@ namespace CosmicMemory.View
         private void SelectLang(int index)
         {
             TMP_Dropdown.OptionData option = _selectorLang.options[index];
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
+           // YandexGame.SwitchLanguage(option.text);
+            SaveHelper.savesData.language = LocalizationSettings.SelectedLocale.Identifier.CultureInfo.Name;
+            SaveHelper.SaveData();
 
             // TODO настроить смену языка в игре
         }

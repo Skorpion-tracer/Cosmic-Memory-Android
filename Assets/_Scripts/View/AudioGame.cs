@@ -18,7 +18,7 @@ namespace CosmicMemory.View
         #endregion
 
         #region Unity Methods
-        private void Awake()
+        private void Start()
         {
             if (instance == null)
             {
