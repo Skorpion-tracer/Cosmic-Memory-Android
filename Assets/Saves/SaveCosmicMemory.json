@@ -1,6 +1,6 @@
 {
     "language": "ru",
-    "scores": 6509,
+    "scores": 10497,
     "levels": [
         {
             "Index": 1,
@@ -14,21 +14,21 @@
             "LevelHard": 0,
             "IsComplete": true,
             "IsAcces": true,
-            "TimeComplete": 6.394948482513428
+            "TimeComplete": 4.979398727416992
         },
         {
             "Index": 3,
             "LevelHard": 0,
             "IsComplete": true,
             "IsAcces": true,
-            "TimeComplete": 11.665255546569825
+            "TimeComplete": 5.028656005859375
         },
         {
             "Index": 4,
             "LevelHard": 0,
             "IsComplete": true,
             "IsAcces": true,
-            "TimeComplete": 12.712606430053711
+            "TimeComplete": 11.1586275100708
         },
         {
             "Index": 5,
@@ -208,16 +208,16 @@
         {
             "Index": 30,
             "LevelHard": 2,
-            "IsComplete": false,
-            "IsAcces": false,
-            "TimeComplete": 0.0
+            "IsComplete": true,
+            "IsAcces": true,
+            "TimeComplete": 134.4159698486328
         },
         {
             "Index": 31,
             "LevelHard": 3,
-            "IsComplete": false,
+            "IsComplete": true,
             "IsAcces": true,
-            "TimeComplete": 0.0
+            "TimeComplete": 182.287353515625
         }
     ],
     "idBackground": "id003",

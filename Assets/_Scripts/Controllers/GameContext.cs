@@ -68,7 +68,12 @@ namespace CosmicMemory.Controllers
 
         public bool IsLastLevel()
         {
-            return _curentLevel != _extremeLevel - 1 || _curentLevel == _extremeLevel;
+            return !(_curentLevel == _extremeLevel - 1 || _curentLevel == _extremeLevel);
+        }
+
+        public bool IsExtremeLevel()
+        {
+            return _curentLevel == _extremeLevel;
         }
 
         public void UpdateDataLevel(float time, int scores)

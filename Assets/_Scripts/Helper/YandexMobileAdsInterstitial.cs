@@ -46,7 +46,7 @@ namespace CosmicMemory.Helper
             MobileAds.SetAgeRestrictedUser(true);
 
             // Replace demo Unit ID 'demo-interstitial-yandex' with actual Ad Unit ID
-            string adUnitId = "dR-M-11968369-2";
+            string adUnitId = "R-M-11968369-2";
 
             if (this.interstitial != null)
             {

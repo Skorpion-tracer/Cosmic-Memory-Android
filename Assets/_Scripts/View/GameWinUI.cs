@@ -85,7 +85,14 @@ namespace CosmicMemory.View
             _panelWinUI.localScale = Vector3.zero;
             _panelWinUI.gameObject.SetActive(true);
             _panelWinUI.DOScale(Vector3.one, _panelShowDuration).SetDelay(_panelDelayShow).SetEase(Ease.OutBack);
+
             _nextLevel.gameObject.SetActive(_gameContext.IsLastLevel());
+
+            //if (_gameContext.IsExtremeLevel())
+            //{
+            //    _nextLevel.gameObject.SetActive(false);
+            //}
+
             TimeSpan time = TimeSpan.FromSeconds(_levelController.Time);
             _textTime.text = $"{time.Minutes:00}:{time.Seconds:00}";
             _textScores.text = _levelController.Scores.ToString();
