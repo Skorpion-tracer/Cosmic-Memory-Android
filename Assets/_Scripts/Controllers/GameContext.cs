@@ -24,6 +24,8 @@ namespace CosmicMemory.Controllers
         #region Public Methods
         public void Initialize()
         {
+            UnityEngine.Screen.sleepTimeout = SleepTimeout.NeverSleep;
+            Application.targetFrameRate = 120;
             SaveHelper.LoadData();
             LoadData();
         }
